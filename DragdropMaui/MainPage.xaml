@@ -1,0 +1,36 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragdropMaui.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Drag &amp; Drop Sample Maui" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting_1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+        
+        <Frame Margin="20">
+            <Frame.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop_1" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <Entry Text="" >
+            <Entry.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop_1" />
+            </Entry.GestureRecognizers>
+
+        </Entry>
+                <Label Text="Drag Me away" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36">
+                    <Label.GestureRecognizers>
+                        <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting_1" />
+                    </Label.GestureRecognizers>
+                </Label>
+    
+
+    </StackLayout>
+ 
+</ContentPage>
